@@ -20,7 +20,7 @@ public class DistroController {
             String ver = System.getProperty("os.version");
             return "Sistema Windows detectado: Versão "+ver;
         } else {//Linux
-            StringBuilder LinuxDistro = null;
+            StringBuilder LinuxDistro = new StringBuilder();
             LinuxDistro.append("Linux detectado:\n");
             try {
                 Process Distro = Runtime.getRuntime().exec("cat /etc/os-release");
